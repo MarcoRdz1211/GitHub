@@ -1,0 +1,22 @@
+#include "colors.inc"
+                     
+background{color White}
+
+camera {location <7.5, 5, -7.5> look_at <0, 0, 0>}
+
+#declare steep=radians(10);
+#declare Ball=sphere{<0,0,0> 0.1 pigment{color Green}}
+
+#fopen outFile "sen.txt" write
+
+#declare xx=0;
+#while (xx<2*pi)
+    #declare yy=sin(xx);
+    
+    object{Ball translate<xx,yy,0>} 
+    
+    #write(outFile,xx," ",yy,"\n")
+    #declare xx=xx+steep;
+#end
+
+#fclose

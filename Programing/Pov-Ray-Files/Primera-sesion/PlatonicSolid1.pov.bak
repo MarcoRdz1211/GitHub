@@ -1,0 +1,36 @@
+#declare a = 4;
+#declare L = a * sqrt(2);
+#declare Pos= array [8];
+#declare Pos[0]=<a/2, a/2, a/2>;
+#declare Pos[1]=<-a/2, -a/2, -a/2>;
+#declare Pos[2]=<-a/2, -a/2, a/2>;
+#declare Pos[3]=<-a/2, a/2, -a/2>;
+#declare Pos[4]=<a/2, -a/2, -a/2>;
+#declare Pos[5]=<a/2, -a/2, a/2>;
+#declare Pos[6]=<-a/2, a/2, a/2>;
+#declare Pos[7]=<a/2, a/2, -a/2>;
+
+
+// This block is to define the vertices as spheres
+#declare i=0;
+
+#while ( i < 8 )
+sphere {Pos[i], 0.3 pigment{color <1,0,0>}}
+#declare i=i+1;
+#end
+
+//This block is to calculate the distances among vertices and define edges
+
+#declare i=0; //BLoque aristas cubo
+
+ #while( i < 7 )
+#declare j = i + 1;
+#while(j<8)
+#declare distancia= VDist( Pos[i], Pos[j] );
+#if (distancia < L )
+cylinder{ Pos[i] , Pos[j], 0.05 texture {pigment {color <0,1,0>}} finish{phong 1}}
+#end
+#declare j=j+1;
+#end
+#declare i= i + 1;
+#end

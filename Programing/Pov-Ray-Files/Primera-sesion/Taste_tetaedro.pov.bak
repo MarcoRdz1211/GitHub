@@ -1,0 +1,34 @@
+#include "colors.inc"
+                     
+background{color White}
+
+camera {location <-15, 10, -15> look_at <0, 0, 0>}
+                                  
+#fopen outFile "test_tetaedro.txt" write
+      
+#declare Re=0.2;
+#declare a=4;
+#declare i=0;
+#declare j=0;
+#declare k=0;  
+
+#declare atoms=union{
+                     #while (i<=a)     
+                        #while (j<=a)
+                            #while (k<=a)       
+                                
+                                #write(outFile,"<",a/2-i,",",a/2-j,",",a/2-k,">","\n")
+                                sphere {<a/2-i,a/2-j,a/2-k> Re}
+                                #declare k=k+1;
+                            #end
+                               
+                            #declare j=j+1;
+                        #end
+                        
+                        #declare i=i+1;
+                     #end   
+                        
+                     texture{pigment{color Blue}finish{phong 1}}
+                    }   
+
+object{atoms}

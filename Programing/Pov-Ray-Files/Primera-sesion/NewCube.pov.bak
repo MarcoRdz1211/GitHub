@@ -1,0 +1,13 @@
+[11:06 a. m.] TLAHUICE FLORES ALFREDO
+    #fopen MyFile "octa.dat" read    //Archivo de entrada
+#declare Re=0.2; 
+#declare Mystring= "H";  
+#declare atoms=
+union{
+  #while (defined(MyFile))
+      #read (MyFile,Mystring,Vector)        
+       sphere {Vector,    Re}   
+   #end      
+  texture{pigment{color Red}finish{phong 1}}
+}
+object{atoms}

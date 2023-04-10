@@ -1,0 +1,63 @@
+#include "colors.inc"
+             
+background{rgb <1,1,1>}
+
+camera {location <24, 24, 24> look_at <0, 0, 0>}
+    
+#declare flecha=union{cylinder{<0,0,0>,<1,0,0>,0.05
+                               texture{pigment{color Green} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                      cone{<1,0,0>,0.07,<1.1,0,0>,0
+                           texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                           }
+                      }
+                      
+#declare axis=union{
+                    cylinder{<0,0,0>,<10,0,0>,0.05
+                               texture{pigment{rgb <1,0,0.5>} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                    cone{<10,0,0>,0.07,<10*1.1,0,0>,0
+                           texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                           }
+                             
+                    cylinder{<0,0,0>,<0,10,0>,0.05
+                             texture{pigment{rgb <1,0,0.5>} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                    cone{<0,10,0>,0.07,<0,10*1.1,0>,0
+                         texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                         } 
+                    
+                    cylinder{<0,0,0>,<0,0,10>,0.05
+                             texture{pigment{rgb <1,0,0.5>} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                    cone{<0,0,10>,0.07,<0,0,10*1.1>,0
+                         texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                         }
+                    }
+
+#declare A=union{cylinder{<0,0,0>,<3,8,5>,0.05
+                               texture{pigment{color Green} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                      cone{<3,8,5>,0.07,<3*1.1,8*1.1,5*1.1>,0
+                           texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                           }
+                      } 
+ 
+#declare B=union{cylinder{<0,0,0>,<-5,2,-3>,0.05
+                               texture{pigment{color Green} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                      cone{<-5,2,-3>,0.07,<-5*1.1,2*1.1,-3*1.1>,0
+                           texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                           }
+                      }
+                      
+#declare C=union{cylinder{<0,0,0>,<4,-7,-2>,0.05
+                               texture{pigment{color Green} finish {phong 0.5 reflection{0.00 metallic 0.00}}}}
+                      cone{<4,-7,-2>,0.07,<4*1.1,-7*1.1,-2*1.1>,0
+                           texture{pigment{color Blue} finish {phong 1 reflection{0.00 metallic 0.00}}}
+                           }
+                      }
+                       
+object{flecha}
+object{axis}
+object{A}
+object{B} 
+object{C}
+
+/*#declare Vr=A+B+C;
+
+object{Vr}*/

@@ -1,0 +1,19 @@
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(14) : warning 1220 - A 32 bit INTEGER has been converted to REAL with a 24 bit mantissa
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(4) : warning 197 - Variable FX has been declared but not used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(4) : warning 197 - Variable GY has been declared but not used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(83) : warning 767 - The argument X has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(83) : warning 767 - The argument Y has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(83) : warning 767 - The argument VY has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(83) : warning 767 - The argument T has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(91) : warning 767 - The argument T has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(101) : warning 767 - The argument X has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(101) : warning 767 - The argument Y has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(101) : warning 767 - The argument VX has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(101) : warning 767 - The argument T has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(109) : warning 767 - The argument VY has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(109) : warning 767 - The argument T has not been used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(109) : warning 197 - Variable K has been declared but not used
+C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.F(109) : warning 197 - Variable M has been declared but not used
+[SLINK64 v2.14, Copyright (c) Silverfrost Ltd. 2015-2020]
+Loading C:\Users\Usuario\Desktop\Programing\fortran_program\lgotemp@.obj
+Creating executable file C:\Users\Usuario\Desktop\Programing\fortran_program\fercho2.EXE

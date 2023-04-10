@@ -1,0 +1,63 @@
+#include "colors.inc"
+                              
+background{rgb <1,1,1>}
+
+#fopen outFile "Hexaedro.txt" write
+
+camera {location <-2, 0, -7.5> look_at <0, 0, 0>}
+
+#declare radioedge=0.1;
+#declare radiounion=0.05;
+#declare edgecolor=rgb <0,1,0>;
+#declare unioncolor=rgb <0.5,0.5,0.5>;
+#declare a=1;
+#declare i=0;
+#declare j=0;
+#declare k=0;                                   
+
+#declare hexaedro1 = union{
+                            #for (i,0,a)
+                                #for (j,0,a)
+                                    #for (k,0,a)  
+                                        #write(outFile,"<",a-2*i,",",a-2*j,",",a-2*k,">","\n")
+                                        sphere{<a-2*i,a-2*j,a-2*k> radioedge pigment {color edgecolor}}
+                                        
+                                        #if (sqrt(pow((a-2*i)-(a-2*(i-a)),2)+pow((a-2*j)-(a-2*(j-a)),2)+pow((a-2*k)-(a-2*(k-a)),2))=2*a)
+                                            cylinder{<a-2*i,a-2*j,a-2*k>, <a-2*(i-a),a-2*(j-a),a-2*(k-a)> radiounion pigment {color unioncolor}}                 
+                                        #end
+                                        
+                                    #end                      
+                                #end
+                            #end
+                            }
+
+ 
+object{hexaedro1}   
+
+/*#declare hexaedro = union{sphere{<-1,-1,-1> radioedge pigment {color edgecolor}} 
+    sphere{<-a,-a,a> radioedge pigment {color edgecolor}}
+    sphere{<-a,a,-a> radioedge pigment {color edgecolor}}
+    sphere{<a,-a,-a> radioedge pigment {color edgecolor}}
+    sphere{<-a,a,a> radioedge pigment {color edgecolor}}
+    sphere{<a,-a,a> radioedge pigment {color edgecolor}}
+    sphere{<a,a,-a> radioedge pigment {color edgecolor}}
+    sphere{<a,a,a> radioedge pigment {color edgecolor}}        
+    
+    cylinder{<-a,-a,-a>, <-a,-a,a> radiounion pigment {color unioncolor}}
+    cylinder{<-a,-a,-a>, <-a,a,-a> radiounion pigment {color unioncolor}}
+    cylinder{<-a,-a,-a>, <a,-a,-a> radiounion pigment {color unioncolor}}
+    
+    cylinder{<a,-a,a>, <-a,-a,a> radiounion pigment {color unioncolor}}
+    cylinder{<a,-a,a>, <a,-a,-a> radiounion pigment {color unioncolor}}
+    cylinder{<a,-a,a>, <a,a,a> radiounion pigment {color unioncolor}} 
+    
+    cylinder{<-a,a,a>, <-a,-a,a> radiounion pigment {color unioncolor}}
+    cylinder{<-a,a,a>, <-a,a,-a> radiounion pigment {color unioncolor}}
+    cylinder{<-a,a,a>, <a,a,a> radiounion pigment {color unioncolor}}
+    
+    cylinder{<a,a,-a>, <-a,a,-a> radiounion pigment {color unioncolor}}
+    cylinder{<a,a,-a>, <a,-a,-a> radiounion pigment {color unioncolor}}
+    cylinder{<a,a,-a>, <a,a,a> radiounion pigment {color unioncolor}}
+    }           
+    
+object{hexaedro}*/
