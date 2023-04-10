@@ -1,0 +1,19 @@
+Estructuras basicas de python:
+-Basic: input, print
+-Types: integer, real, string, list, sets, booleans
+-Operators: +, -, *, /, %, **, //
+-Logic operators: ==, >=, <=, >, <, !=, and, or, not, is, is not, in, not in, 
+-Statments: logical (If, else), (for, while), range, break, continue, pass
+-Complex Operators: +=, -=, *=, /=, %=
+-Definition: def
+-List operators: append, insert, remove, pop, clear, count, sort, reverse, copy, matrix forms
+-Packages: math, numpy, matplotlib, random, statistics
+
+Forma de crear documentos .txt:
+f = open("name.txt","[x=created, a=append, w=write]")
+f.write("Text")
+f.read()
+f.close()
+
+Modulos o librerias:
+Expert: Module import (https://docs.python.org/3/tutorial/modules.html)

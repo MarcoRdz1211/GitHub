@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+double fact(double x)
+{
+  return tgamma(x+1.);
+}
+
+int main(){
+    int N,j,L=0,cont=0,i=0;
+    double k;
+    scanf("%d", &N);
+    j=N/2;
+    while(i!=j){
+        k=fact(j-i);
+        if(k<=N){
+            N=N-k;
+            cont++;
+            i--;
+        }
+        if(N==0)
+            break;
+        i++;
+    }
+    printf("%d",cont);
+    return 0;
+}
