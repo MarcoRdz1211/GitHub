@@ -25,24 +25,6 @@
       }
     }
   },
-  "DifMatrix.py": {
-    "2023": {
-      "06": {
-        "05": {
-          "23:51:01": "python manim.py projects\\inProcess\\DifMatrix.py Video -p"
-        }
-      }
-    }
-  },
-  "Fractal-Animation.py": {
-    "2023": {
-      "06": {
-        "05": {
-          "23:51:50": "python manim.py projects\\inProcess\\Fractal-Animation.py Video -pl"
-        }
-      }
-    }
-  },
   "timeDilationEquation.py": {
     "2023": {
       "06": {
@@ -50,15 +32,11 @@
           "23:57:33": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl",
           "23:58:00": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl",
           "23:58:46": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl"
-        }
-      }
-    }
-  },
-  "parabola1.py": {
-    "2023": {
-      "06": {
+        },
         "06": {
-          "00:09:28": "python manim.py projects\\inProcess\\parabola1.py Video -pl"
+          "00:37:25": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl",
+          "00:38:51": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl",
+          "01:35:09": "python manim.py projects\\inProcess\\timeDilationEquation.py Video -pl"
         }
       }
     }
